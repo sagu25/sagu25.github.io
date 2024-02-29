@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Style.css">
+<title >YAY! It'S BOGO</title>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="title" style="color: #FF6B82;"><span style="color: grey;">-----------------</span>YAY! It'S BOGO<span style="color: grey;">---------------</span></div>
+    
+    <div class="box" id="box1">
+       
+        <input type="radio" value="1"> 1 unit &nbsp; <span style="background-color: #FF6B82;width: 150px;">10% off</span>
+        <br><label for="pp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard Price</label>
+        
+        <div class="options">
+            <span style="margin-top: -15px;margin-right:-50px;">Size</span>
+            <span style="margin-top: 12px;">#1</span>
+            <select >
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+            </select>
+            <span style="margin-top: -15px;margin-right:-40px;">Color</span>
+                <select >
+                    <option value="red">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+ 
+        </div>
+        <div class="options" style="padding-top: 10px;width: 150px;">
+            
+            <span style="margin-top: 12px;margin-left: -20px;">#2</span>
+                <select>
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                </select>
+    
+             
+                <select>
+                    <option value="red">Color</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                
+               
+    
+        </div>
+
+        
+           
+        
+        <div class="price">
+            <span>$10.00 USD</span>
+            <p class="line-through">$24.00 </p>
+           
+            
+           
+        </div>
+    </div>
+    
+    <div class="box overlay " id="box2">
+            <span class="overlay-box" >
+                <span class="overlay-triangle-left"></span>
+                MOST POPULAR
+                <span class="overlay-triangle-right"></span>
+            </span>
+          
+            <input type="radio" value="2"> 2 units &nbsp; <span style="background-color:#FF6B82;">20% off</span> 
+            <div class="options">
+                <span style="margin-top: -15px;margin-right:-50px;">Size</span>
+            <span style="margin-top: 12px;">#1</span>
+                <select>
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                </select>
+
+                 <span style="margin-top: -15px;margin-right:-40px;">Color</span>
+                <select>
+                    <option value="red">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                
+               
+
+        </div>
+        <div class="options" style="padding-top: 10px;width: 150px;">
+            
+        <span style="margin-top: 12px;margin-left: -20px;">#2</span>
+            <select>
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+            </select>
+
+         
+            <select>
+                <option value="red">Color</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+            
+           
+
+    </div>
+        <div class="price">
+            $18.00 USD
+            <p class="line-through">$24.00</p>
+            
+        </div>
+    </div>
+    
+    <div class="box" id="box3">
+        <input type="radio" value="3" style="color: #FF6B82;"> 3 units &nbsp; <span style="background-color: #FF6B82;">30% off</span> 
+        <div class="options">
+            <span style="margin-top: -15px;margin-right:-50px;">Size</span>
+            <span style="margin-top: 12px;">#1</span>
+            <select id = "size-select">
+                
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+            </select>
+            <span style="margin-top: -15px;margin-right:-40px;">Color</span>
+            <select id = "color-select">
+                <option value="red"> Black</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+
+            
+        </div>
+        <div class="options" style="padding-top: 10px;width: 150px;">
+            
+            <span style="margin-top: 12px;margin-left: -20px;">#2</span>
+                <select>
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                </select>
+    
+             
+                <select>
+                    <option value="red">Color</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                
+               
+    
+        </div>
+        <div class="price">
+            $24.00 USD
+            <p class="line-through">$24.00</p>
+            
+        </div>
+    </div>
+
+   
+    
+</div>
+<div class="d">Free Delivery</div>
+<div class="r">Total:$18.00 USD</div>
+
+<button class="add-to-cart">+ &nbsp; Add to cart </button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+document.querySelectorAll('.box').forEach(box => {
+        box.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    });
+//i have firstly used the lib for making the dropdown list properly interactive but as it is mentioned not to use lib i have commented the code 
+//we can uncomment it and comment the above code 
+    /*document.querySelector('.add-to-cart').addEventListener('click', function() {
+        alert('Product added to cart!');
+    });
+
+    $(".box").click(function(){
+        $(this).toggleClass("expanded");
+    });
+    $(".box  select").click(function(){
+        event.stopPropagation();
+    });*/
+
+   
+</script>
+
+</body>
+</html>
